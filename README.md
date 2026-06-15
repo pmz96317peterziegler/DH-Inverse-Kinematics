@@ -4,7 +4,7 @@ A numerical **inverse-kinematics** solver for the **UR5** 6-DOF robot arm, built
 
 ![UR5 reaching the target pose](results/UR5_sim.png)
 
-> For the example target, the solver converges in **10 iterations** and reproduces the target pose to within **~1×10⁻⁷**.
+> For the example target, the solver converges in **10 iterations** and reproduces the target pose to within **~1×10⁻⁷**. This image was produced in a simulation software called CoppeliaSim.
 
 ---
 
