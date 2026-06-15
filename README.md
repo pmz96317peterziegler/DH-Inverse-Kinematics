@@ -1,4 +1,4 @@
-# UR5 Inverse Kinematics — Jacobian / Newton Method
+# UR5 Inverse Kinematics — Classical Denavit-Hartenberg Method
 
 A numerical **inverse-kinematics** solver for the **UR5** 6-DOF robot arm, built from the arm's Denavit–Hartenberg parameters. Given a target end-effector pose (position *and* orientation), it iteratively solves for the joint angles that reach it, using forward kinematics, the geometric Jacobian, and an axis–angle orientation error.
 
