@@ -72,7 +72,7 @@ initial_guess = [-0.27, 4.794, -2.026, -2.634, 3.241, -1.418]
 solution = inverse_kinematics(T_target, initial_guess)
 ```
 
-The error drops from ~2.78 to below $10^{-4}$ in ten iterations, and forward kinematics of the returned angles reproduces `T_target` to ~$10^{-7}$.
+The error drops from ~2.78 to below $10^{-4}$ in ten iterations, and forward kinematics of the returned angles reproduces `T_target` to ~ $10^{-7}$.
 
 ## Repository structure
 
