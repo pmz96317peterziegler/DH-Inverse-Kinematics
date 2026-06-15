@@ -2,7 +2,7 @@
 
 A numerical **inverse-kinematics** solver for the **UR5** 6-DOF robot arm, built from the arm's Denavit–Hartenberg parameters. Given a target end-effector pose (position *and* orientation), it iteratively solves for the joint angles that reach it, using forward kinematics, the geometric Jacobian, and an axis–angle orientation error.
 
-![UR5 reaching the target pose](results/arm_solution.png)
+![UR5 reaching the target pose](results/UR5_sim.png)
 
 > For the example target, the solver converges in **10 iterations** and reproduces the target pose to within **~1×10⁻⁷**.
 
@@ -81,8 +81,8 @@ The error drops from ~2.78 to below $10^{-4}$ in ten iterations, and forward kin
 ├── src/
 │   └── IK_solver_DH.py     # DH model, forward kinematics, Jacobian, orientation error, numerical IK
 ├── results/
-│   └── UR5_sim.png   # the example solution, visualized
-|   └── work_for_DH_IK.JPG # the work I performed to get set up the script
+│   └── UR5_sim.png         # the example solution, visualized
+|   └── work_for_DH_IK.JPG  # the work I performed to get set up the script
 └── README.md
 ```
 
