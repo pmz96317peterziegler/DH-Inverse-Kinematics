@@ -10,7 +10,7 @@ A numerical **inverse-kinematics** solver for the **UR5** 6-DOF robot arm, built
 
 ## Overview
 
-Forward kinematics answers "given the joint angles, where is the hand?" Inverse kinematics asks the harder reverse question: "given where I want the hand, what joint angles get it there?" For a 6-DOF arm reaching a full 6-DOF pose there is no simple formula, so this project solves it **numerically** — starting from an initial guess and stepping the joint angles down the error gradient until the end-effector pose matches the target in both **position** and **orientation**.
+Forward kinematics answers "given the joint angles, where is the hand?" Inverse kinematics asks the harder reverse question: "given where I want the hand, what joint angles get it there?" For a 6-DOF arm reaching a full 6-DOF pose there is no simple formula, so this project solves it **numerically**. The script achieves this by starting from an initial guess and stepping the joint angles down the error gradient until the end-effector pose matches the target in both **position** and **orientation**.
 
 ## The UR5 model
 
@@ -51,7 +51,7 @@ stacking into a $6\times6$ matrix mapping joint rates to the end-effector twist.
 
 **Orientation error.** The rotational part of the error can't be a matrix subtraction. The solver forms $R_{\text{err}} = R_{\text{target}}R_{\text{current}}^\top$ and extracts its axis–angle (the SO(3) logarithm): the angle from $\cos\theta = (\mathrm{tr}(R_{\text{err}}) - 1)/2$ and the axis from the skew-symmetric part. This gives a 3-vector orientation error that combines with the 3-vector position error into a single 6-D pose error.
 
-**Iteration.** Each step solves for a joint update from the pose error via the Jacobian and takes a Newton step:
+**Iteration.** Each step solves for a joint update from the pose error via the Jacobian and takes a step:
 
 $$
 \Delta\theta = J^{+}\,e, \qquad \theta \leftarrow \theta + \text{step}\cdot\Delta\theta
